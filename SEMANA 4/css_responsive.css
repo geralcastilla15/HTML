@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    margin:0%;
+    padding: 0%;
+
+}
+html{
+    max-height:100;
+}
+body{
+    font-family:tahoma ;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    background-attachment: fixed;
+
+}
+/*seccion<header> cabecera*/
+#header{
+    background-color: aqua;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;/*alinear horizontal*/
+    align-items: center;/*alinear horizontal*/
+    grid-area: header; /*nombre contenedor CSS GRID*/
+}
+ul{
+    padding: 0;
+    margin: 0 1px;
+}
+li{
+    list-style: none;/*Quitar viñetas*/
+    margin:0 5px;
+    font: bold 12px verdana;
+}
+a{
+    color: aliceblue;
+    text-decoration: none; /*Quitar subrayado*/
+}
+/*seccion estilos <nav> barra menu*/
+#menu{
+    grid-area: nav;/*Nombre contenedor CSS GRID*/
+    background-color: blue;
+    border:2px yellowgreen;
+    border-radius: 22px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin:5px;
+}
+/*seccion estilos barra submenu*/
+.menu>li{
+    position:relative;
+    display: inline-block;
+}
+.menuB>li>a{
+    display: block;
+    padding: 15px 20px;
+    color: azure;
+    text-decoration: none;
+}
+.menuB li a:hover{
+    color: lightsalmon;
+    transition: all .3s;
+}/*Evento cssal pasar mouse encima menu*/
+.submenu{
+    position: absolute;
+    background: blue;
+    width: 120%;
+    display: none;/* se mantenga oculto*/
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li:hover .submenu{ /*evento de mostar submenu al pasarmouse*/
+    display: block;
+    z-index: 100;/* capa superior en pagina web */
+}
+/* secion de estilos buscarbox */
+.buscarbox  input{
+    height: 25px;
+    width: 0px;
+    padding: 0px;
+    border-radius:40px;
+    border:0px ;
+    padding-right: 50px;
+    transition: ease 0.8s;
+}
+.buscarbox  input:hover{/*evento de ampliar ancho al pasar mouse*/
+    width: 150px;
+    padding-left: 18px;
+    outline: none;
+}
+/* seccion de contenido <section> y <article> */
+#main{
+    grid-area: main ; /* nombre contenedor CSS GRID*/
+    border:2px solid  greenyellow;
+    border-radius: 22px;
+    max-width: 100%;/*adaptable a cualquier dispositivo*/
+    height: auto;/* adaptable a cualquier dispositivo*/
+    background-color: rgba(255,255,255,0.6);/* Efecto Glass*/
+    backdrop-filter:blur(5px);/*Efecto Glass*/
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+/*seccion de estilos <article> icons de escuelas incap */
+.programa{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+section article{
+    background-color:rgba(255,255,255,0.6);
+    backdrop-filter:aliceblue (5px);
+    margin: 20px
+}
+/* seccion estilos <aside> barra lateral */
+#sidebar{
+    grid-area:sidebar ;/* nombre de contenedor CSS GRID*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;/*adaptable a cualquier dispositivo */
+    height: auto;/*adaptable a cualquier dispositivo */
+}
+/* sseccion estilos <fototer> */
+#footer{
+    grid-area: footer;/* nombre  contenedor CSS GRID*/
+    padding-top: 20px;
+    border:2px solid yellowgreen;
+    border-radius:22px;
+    clear: both;/*eliminar flotamiento parte superior */
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5);/*agrandar icono al evento de pasar mouse encima*/
+}
+/* Estilos a iconos fontawesome redes sociales*/
+i[class ^="fa"]{
+    color: beige;
+    font-size: 18px;
+}
+i[class ^="fab"]{
+    color: beige;
+    font-size: 30px;
+    border:1px solid transparent;
+    margin: 0px;
+}
